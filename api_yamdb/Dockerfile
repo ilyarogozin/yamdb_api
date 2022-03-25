@@ -17,6 +17,6 @@ RUN apt install -y libpq-dev
 RUN apt install -y gcc
 RUN apt install nano && touch ~/.nanorc && echo include "/usr/share/nano/python.nanorc" >> ~/.nanorc
 RUN python3 -m pip install --upgrade pip
-RUN pip3 install -r /app/requirements.txt --no-cache-dir
+RUN pip3 install -r requirements.txt --no-cache-dir
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
