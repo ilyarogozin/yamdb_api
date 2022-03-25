@@ -23,7 +23,6 @@ from .serializers import (CategorySerializer, CommentSerializer,
                           TitleSerializer, UsernameEmailSerializer,
                           UserSerializer)
 
-
 ACTIVATE = 'Активируйте свой аккаунт.'
 CONFIRMATION_CODE = (
     'Ваш код подтверждения: {confirmation_code}\n'
