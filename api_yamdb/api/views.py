@@ -6,23 +6,23 @@ from django.shortcuts import get_object_or_404
 from django_filters import rest_framework as fl
 from rest_framework import filters, mixins, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import (
-    SAFE_METHODS, AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-)
+from rest_framework.permissions import (SAFE_METHODS, AllowAny,
+                                        IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework.serializers import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from reviews.models import Category, Genre, Review, Title, User
+
 from .filters import TitleFilter
-from .permissions import (
-    IsAdmin, IsAdminOrReadOnly, IsAuthorOrReadOnlyOrModeratorOrAdmin
-)
-from .serializers import (
-    CategorySerializer, CommentSerializer, ConfirmationCodeSerializer,
-    GenreSerializer, ReadTitleSerializer, ReviewSerializer, TitleSerializer,
-    UsernameEmailSerializer, UserSerializer
-)
+from .permissions import (IsAdmin, IsAdminOrReadOnly,
+                          IsAuthorOrReadOnlyOrModeratorOrAdmin)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          ConfirmationCodeSerializer, GenreSerializer,
+                          ReadTitleSerializer, ReviewSerializer,
+                          TitleSerializer, UsernameEmailSerializer,
+                          UserSerializer)
+
 
 ACTIVATE = 'Активируйте свой аккаунт.'
 CONFIRMATION_CODE = (
