@@ -23,7 +23,7 @@ git clone git@github.com:ilyarogozin/yamdb_api.git
 
 - Перейдите в папку с файлом docker-compose:
 ```
-cd api_yamdb/infra
+cd yamdb_api/infra
 ```
 
 - Создайте в этой папке файл окружения .env, который будет содержать:
